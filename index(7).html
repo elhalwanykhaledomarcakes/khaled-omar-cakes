@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>حلواني خالد عمر - تورتات ومناسبات ملكية فاخرة</title>
+<style>
+:root{
+  --black:#050505; --black-2:#0b0b0b; --gold:#D4AF37; --gold-light:#F5D76E;
+  --gold-deep:#B8860B; --white:#fff; --muted:#d8d8d8;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--black);color:#fff;font-family:Tahoma,Arial,sans-serif;overflow-x:hidden}
+header{background:radial-gradient(circle at 50% 0,#191919 0,#090909 48%,#050505 100%);padding:26px 5vw 34px;text-align:center;border-bottom:1px solid #6f5711}
+.logo{display:block;width:min(300px,72vw);max-height:140px;object-fit:contain;margin:0 auto 14px;filter:drop-shadow(0 7px 18px #000);background:transparent}
+.brand-line{margin:0;color:var(--gold-light);font-size:clamp(20px,3vw,30px);font-weight:700;line-height:1.5}
+.hotline{display:inline-flex;align-items:center;justify-content:center;gap:8px;margin-top:20px;padding:13px 28px;border:1px solid var(--gold);border-radius:999px;background:var(--gold);color:#070707;text-decoration:none;font-size:18px;font-weight:800;box-shadow:0 10px 28px #000;transition:transform .3s cubic-bezier(.2,.8,.2,1),box-shadow .3s ease,background .3s ease,color .3s ease}
+.hotline:hover{transform:translateX(-10px) translateY(-5px) scale(1.05);box-shadow:0 20px 42px #d4af3748,0 0 0 2px var(--gold-light);background:linear-gradient(135deg,#F8E27C,#D4AF37);color:#050505}
+.hotline:active{transform:translateX(-4px) translateY(-2px) scale(.99)}
+main{max-width:1240px;margin:34px auto;padding:0 22px}
+.section-title{text-align:center;color:var(--gold-light);font-size:clamp(24px,3vw,34px);margin:0 0 24px}
+.section-subtitle{display:none}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.cake-card{background:linear-gradient(145deg,#151515,#0b0b0b);border:1px solid #3a3a3a;border-radius:20px;overflow:hidden;box-shadow:0 12px 30px #000;min-width:0;cursor:pointer;transition:transform .32s cubic-bezier(.2,.8,.2,1),box-shadow .32s ease,border-color .32s ease,background .32s ease,color .32s ease}
+.cake-card:hover{transform:translateX(-11px) translateY(-5px) scale(1.025);background:linear-gradient(135deg,#F8E27C,#D4AF37);border-color:var(--gold-light);box-shadow:0 24px 48px #000,0 0 0 2px var(--gold);color:#050505;z-index:3}
+.cake-card:active{transform:translateX(-5px) translateY(-2px) scale(1)}
+.cake-card img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;background:#111;transition:transform .35s cubic-bezier(.2,.8,.2,1);transform-origin:center}
+.cake-card:hover img{transform:translateX(-10px) scale(1.045)}
+.cake-info{padding:18px 20px 22px;text-align:center}
+.cake-info h2{font-size:20px;color:var(--gold-light);margin:0 0 10px;line-height:1.5;transition:color .25s ease}
+.cake-card:hover .cake-info h2{color:#050505}
+.details{min-height:44px;margin:0;color:#e5e5e5;line-height:1.8;transition:color .25s ease}
+.cake-card:hover .details{color:#17120a}
+.photo-placeholder{aspect-ratio:4/3;background:linear-gradient(135deg,#101010,#1b1b1b);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:#cfcfcf;line-height:1.8;padding:20px;border-bottom:1px solid #333}
+.photo-placeholder span{font-size:18px;font-weight:700;color:var(--gold-light)}
+.photo-placeholder small{font-size:12px;color:#aaa;margin-top:7px}
+footer{margin-top:50px;background:#080808;border-top:1px solid var(--gold);text-align:center;padding:30px 16px 38px}
+footer p{max-width:900px;margin:0 auto 20px;color:#eee;font-size:17px;line-height:1.9}
+.cake-modal{position:fixed;inset:0;z-index:50;background:#000000eb;display:flex;align-items:center;justify-content:center;padding:22px;opacity:0;visibility:hidden;transition:opacity .25s ease,visibility .25s ease}
+.cake-modal.open{opacity:1;visibility:visible}
+.modal-panel{position:relative;background:#121212;border:1px solid var(--gold);border-radius:20px;overflow:hidden;width:min(850px,100%);max-height:90vh;display:grid;grid-template-columns:1.1fr .9fr;box-shadow:0 25px 80px #000;transform:translateY(35px) scale(.92);transition:transform .32s cubic-bezier(.2,.8,.2,1)}
+.cake-modal.open .modal-panel{transform:translateY(0) scale(1)}
+.modal-panel img{width:100%;height:100%;max-height:75vh;object-fit:cover;background:#111}
+.modal-copy{padding:34px 26px;align-self:center}.modal-copy h2{color:var(--gold-light);font-size:26px;margin:0 0 14px}.modal-copy p{line-height:1.9;color:var(--muted);white-space:pre-wrap}
+.modal-close{position:absolute;top:10px;left:10px;border:1px solid var(--gold);border-radius:50%;width:38px;height:38px;background:#151515;color:var(--gold-light);font-size:24px;cursor:pointer;box-shadow:0 2px 10px #000;transition:transform .2s ease}.modal-close:hover{transform:scale(1.08)}
+@media(max-width:850px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.modal-panel{grid-template-columns:1fr;overflow:auto}.modal-panel img{height:auto;max-height:48vh}.modal-copy{padding:20px}}
+@media(max-width:560px){.grid{grid-template-columns:1fr;gap:18px}main{padding:0 15px}header{padding-top:18px}.hotline{font-size:16px;padding:12px 20px}.brand-line{font-size:19px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+
+</style>
+</head>
+<body>
+<header>
+  <img class="logo" src="logo.png" alt="حلواني خالد عمر - محطة الحلويات Sweets Station">
+  <p class="brand-line" id="brandLine"></p>
+  <a class="hotline" id="topHotline" href="tel:16562"></a>
+</header>
+
+<main>
+  <h2 class="section-title" id="sectionTitle"></h2>
+  <p class="section-subtitle" id="sectionSubtitle"></p>
+
+  <section class="grid">
+    <article class="cake-card" data-cake="1">
+      <img src="cake-1.png" alt="تورتة 1" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="photo-placeholder" style="display:none">
+        <span>تورتة 1</span>
+        <small>تأكد من وجود الصورة باسم cake-1.png في نفس مكان ملف الموقع</small>
+      </div>
+      <div class="cake-info">
+        <h2 class="cake-title"></h2>
+        <p class="details cake-details"></p>
+      </div>
+    </article>
+    <article class="cake-card" data-cake="2">
+      <img src="cake-2.png" alt="تورتة 2" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="photo-placeholder" style="display:none">
+        <span>تورتة 2</span>
+        <small>تأكد من وجود الصورة باسم cake-2.png في نفس مكان ملف الموقع</small>
+      </div>
+      <div class="cake-info">
+        <h2 class="cake-title"></h2>
+        <p class="details cake-details"></p>
+      </div>
+    </article>
+    <article class="cake-card" data-cake="3">
+      <img src="cake-3.png" alt="تورتة 3" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="photo-placeholder" style="display:none">
+        <span>تورتة 3</span>
+        <small>تأكد من وجود الصورة باسم cake-3.png في نفس مكان ملف الموقع</small>
+      </div>
+      <div class="cake-info">
+        <h2 class="cake-title"></h2>
+        <p class="details cake-details"></p>
+      </div>
+    </article>
+    <article class="cake-card" data-cake="4">
+      <img src="cake-4.png" alt="تورتة 4" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="photo-placeholder" style="display:none">
+        <span>تورتة 4</span>
+        <small>تأكد من وجود الصورة باسم cake-4.png في نفس مكان ملف الموقع</small>
+      </div>
+      <div class="cake-info">
+        <h2 class="cake-title"></h2>
+        <p class="details cake-details"></p>
+      </div>
+    </article>
+    <article class="cake-card" data-cake="5">
+      <img src="cake-5.png" alt="تورتة 5" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="photo-placeholder" style="display:none">
+        <span>تورتة 5</span>
+        <small>تأكد من وجود الصورة باسم cake-5.png في نفس مكان ملف الموقع</small>
+      </div>
+      <div class="cake-info">
+        <h2 class="cake-title"></h2>
+        <p class="details cake-details"></p>
+      </div>
+    </article>
+    <article class="cake-card" data-cake="6">
+      <img src="cake-6.png" alt="تورتة 6" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="photo-placeholder" style="display:none">
+        <span>تورتة 6</span>
+        <small>تأكد من وجود الصورة باسم cake-6.png في نفس مكان ملف الموقع</small>
+      </div>
+      <div class="cake-info">
+        <h2 class="cake-title"></h2>
+        <p class="details cake-details"></p>
+      </div>
+    </article>
+    <article class="cake-card" data-cake="7">
+      <img src="cake-7.png" alt="تورتة 7" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="photo-placeholder" style="display:none">
+        <span>تورتة 7</span>
+        <small>تأكد من وجود الصورة باسم cake-7.png في نفس مكان ملف الموقع</small>
+      </div>
+      <div class="cake-info">
+        <h2 class="cake-title"></h2>
+        <p class="details cake-details"></p>
+      </div>
+    </article>
+    <article class="cake-card" data-cake="8">
+      <img src="cake-8.png" alt="تورتة 8" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="photo-placeholder" style="display:none">
+        <span>تورتة 8</span>
+        <small>تأكد من وجود الصورة باسم cake-8.png في نفس مكان ملف الموقع</small>
+      </div>
+      <div class="cake-info">
+        <h2 class="cake-title"></h2>
+        <p class="details cake-details"></p>
+      </div>
+    </article>
+    <article class="cake-card" data-cake="9">
+      <img src="cake-9.png" alt="تورتة 9" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="photo-placeholder" style="display:none">
+        <span>تورتة 9</span>
+        <small>تأكد من وجود الصورة باسم cake-9.png في نفس مكان ملف الموقع</small>
+      </div>
+      <div class="cake-info">
+        <h2 class="cake-title"></h2>
+        <p class="details cake-details"></p>
+      </div>
+    </article>
+    <article class="cake-card" data-cake="10">
+      <img src="cake-10.png" alt="تورتة 10" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="photo-placeholder" style="display:none">
+        <span>تورتة 10</span>
+        <small>تأكد من وجود الصورة باسم cake-10.png في نفس مكان ملف الموقع</small>
+      </div>
+      <div class="cake-info">
+        <h2 class="cake-title"></h2>
+        <p class="details cake-details"></p>
+      </div>
+    </article>
+    <article class="cake-card" data-cake="11">
+      <img src="cake-11.png" alt="تورتة 11" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="photo-placeholder" style="display:none">
+        <span>تورتة 11</span>
+        <small>تأكد من وجود الصورة باسم cake-11.png في نفس مكان ملف الموقع</small>
+      </div>
+      <div class="cake-info">
+        <h2 class="cake-title"></h2>
+        <p class="details cake-details"></p>
+      </div>
+    </article>
+  </section>
+</main>
+
+<div class="cake-modal" id="cakeModal" aria-hidden="true">
+  <div class="modal-panel" role="dialog" aria-modal="true" aria-label="تفاصيل التورتة">
+    <button class="modal-close" id="modalClose" aria-label="إغلاق">×</button>
+    <img id="modalImage" src="" alt="">
+    <div class="modal-copy">
+      <h2 id="modalTitle"></h2>
+      <p id="modalDetails"></p>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p id="footerText"></p>
+  <a class="hotline" id="footerHotline" href="tel:16562"></a>
+</footer>
+
+<script src="content.js"></script>
+<script>
+(function(){
+  const base = window.KHALED_CONTENT || {};
+  let saved = {};
+  try { saved = JSON.parse(localStorage.getItem('KHALED_CONTENT_OVERRIDES') || '{}') || {}; } catch(e) { saved = {}; }
+  const c = Object.assign({}, base, saved, { cakes: (saved.cakes || base.cakes || []) });
+  const setText = (id, value) => { const el=document.getElementById(id); if(el && value!=null) el.textContent=value; };
+  setText('brandLine', c.brandLine);
+  setText('topHotline', c.topHotline);
+  setText('sectionTitle', c.sectionTitle);
+  setText('sectionSubtitle', c.sectionSubtitle);
+  setText('footerText', c.footerText);
+  setText('footerHotline', c.footerHotline);
+  (c.cakes || []).forEach(item => {
+    const card=document.querySelector('.cake-card[data-cake="'+item.id+'"]');
+    if(!card) return;
+    const title=card.querySelector('.cake-title');
+    const details=card.querySelector('.cake-details');
+    const img=card.querySelector('img');
+    if(title) title.textContent=item.title || '';
+    if(details) details.textContent=item.details || '';
+    if(img) img.alt=item.title || ('تورتة '+item.id);
+  });
+  const modal=document.getElementById('cakeModal');
+  const modalImage=document.getElementById('modalImage');
+  const modalTitle=document.getElementById('modalTitle');
+  const modalDetails=document.getElementById('modalDetails');
+  function openCard(card){
+    const img=card.querySelector('img');
+    const title=card.querySelector('h2');
+    const details=card.querySelector('.details');
+    if(!img || !img.src) return;
+    modalImage.src=img.src;
+    modalImage.alt=img.alt;
+    modalTitle.textContent=title ? title.innerText : '';
+    modalDetails.textContent=details ? details.innerText : '';
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden','false');
+  }
+  function closeModal(){
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden','true');
+  }
+  document.querySelectorAll('.cake-card').forEach(card=>{
+    card.addEventListener('click',e=>{
+      if(e.target.closest('.photo-placeholder')) return;
+      openCard(card);
+    });
+  });
+  document.getElementById('modalClose').addEventListener('click',closeModal);
+  modal.addEventListener('click',e=>{if(e.target===modal) closeModal();});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape') closeModal();});
+})();
+</script>
+</body>
+</html>
