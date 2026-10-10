@@ -10,7 +10,7 @@ window.KHALED_CONTENT = {
   sectionSubtitle: '',
 
   cakes: [
-    { id: 1, title: 'تورتة hi مقاس ٢٠', details: 'تكفي من ٣ ل ٤ أفراد' },
+   { id: 1, title: 'تورتة هاي مقاس ٢٠', details: 'تكفي من ٣ ل ٤ أفراد' },
     { id: 2, title: 'تورتة قلب وسط', details: 'تكفي من ٤ ل ٦ أفراد' },
     { id: 3, title: 'تورتة مقاس ٢٣', details: 'تكفي من ٨ ل ١٠ أفراد' },
     { id: 4, title: 'تورتة مقاس ٢٧', details: 'تكفي من ١٢ ل ١٤ فرد' },
